@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  web:
+    image: tomcat:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - "./app/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war"
+
+  buxfuse:
+    build: buxfuse-custom
+    volumes:
+      - "/app:/app"
