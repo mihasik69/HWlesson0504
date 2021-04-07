@@ -1,7 +1,7 @@
 FROM alpine/git as clone
 WORKDIR /app
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-COPY ./boxfuse-sample-java-war-hello /home/boxfuse-sample-java-war-hello
+COPY "./boxfuse-sample-java-war-hello" "/home/boxfuse-sample-java-war-hello"
 
 FROM maven:3.6.0-jdk-11-slim AS build
 WORKDIR /home/boxfuse-sample-java-war-hello
