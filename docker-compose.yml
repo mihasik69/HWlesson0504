@@ -5,9 +5,12 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - "./app/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war"
+      - "./app_volume/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war"
 
   buxfuse:
     build: buxfuse-custom
     volumes:
-      - "/app/boxfuse-sample-java-war-hello/target:/app"
+      - "/app_volume/boxfuse-sample-java-war-hello/target:/app_volume"
+
+  volumes:
+    app_volume:

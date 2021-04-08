@@ -1,8 +1,9 @@
 FROM alpine/git as clone
-WORKDIR /app
+VOLUME /app_volume
+WORKDIR /app_volume
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
 FROM maven:3.6.0-jdk-11
-WORKDIR /app
-COPY --from=clone /app/boxfuse-sample-java-war-hello /app
+WORKDIR /app_volume
+COPY --from=clone /app_volume/boxfuse-sample-java-war-hello /app_volume
 RUN mvn -f "pom.xml" clean package
