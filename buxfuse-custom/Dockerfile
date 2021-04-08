@@ -1,4 +1,5 @@
 FROM alpine/git as clone
+VOLUME /app_volume
 WORKDIR /app_volume
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
