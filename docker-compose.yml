@@ -12,5 +12,5 @@ services:
     volumes:
       - "/app_volume:/app_volume"
 
-  volumes:
-    app_volume:
+volumes:
+  app_volume:
