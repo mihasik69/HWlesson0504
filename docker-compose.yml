@@ -14,6 +14,10 @@ services:
       - "8090:8080"
     volumes:
       - "/app_volume/boxfuse-sample-java-war-hello/target/hello-1.0.war:/usr/local/tomcat/webapps/hello-1.0.war"
+    environment:
+      username: tomcat
+      passwor: s3cret
+      roles: manager-gui
 
 volumes:
   app_volume:
