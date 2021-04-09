@@ -6,7 +6,7 @@ services:
     volumes:
       - type: volume
         source: app_volume
-        target: /boxfuse-sample-java-war-hello
+        target: /app_volue
 
   prod:
     image: tomcat:9-jdk11-slim
