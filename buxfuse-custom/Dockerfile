@@ -5,6 +5,6 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 FROM maven:3.6.0-jdk-11
 WORKDIR /app_volume
 COPY --from=clone /app /app_volume
-RUN mvn package -f "boxfuse-sample-java-war-hello/pom.xml"
+RUN mvn package -f boxfuse-sample-java-war-hello/pom.xml
 
 VOLUME /app_volume
