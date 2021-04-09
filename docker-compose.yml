@@ -1,7 +1,8 @@
 version: '3.9'
 services:
   build_buxfuse:
-    build: buxfuse-custom
+    build:
+      context: ./buxfuse-custom
     volumes:
       - "/app_volume:/app_volume"
 
