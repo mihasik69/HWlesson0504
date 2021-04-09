@@ -4,7 +4,7 @@ services:
     build:
       context: ./buxfuse-custom
     volumes:
-      - app_volume:my_volume
+      - /app_volume:/my_volume
 
   prod:
     image: tomcat:9-jdk11-slim
