@@ -3,7 +3,7 @@ services:
   build_buxfuse:
     build:
       context: ./buxfuse-custom
-  volumes:
+    volumes:
       - type: volume
         source: app_volume
         target: ./boxfuse-sample-java-war-hello/target/
