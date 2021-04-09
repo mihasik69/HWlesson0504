@@ -7,5 +7,5 @@ RUN ls
 FROM maven:3.6.0-jdk-11
 WORKDIR /app_volume
 RUN ls
-COPY --from=clone /app_volume/boxfuse-sample-java-war-hello /app_volume
+ADD --from=clone /app_volume/boxfuse-sample-java-war-hello /app_volume
 RUN mvn package -f "pom.xml"
