@@ -13,7 +13,7 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - /my_volume/target:/usr/local/tomcat/webapps
+      - /my_volume/boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps
     networks:
       - webnet
 
