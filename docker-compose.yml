@@ -4,7 +4,7 @@ services:
     build:
       context: ./buxfuse-custom
     volumes:
-      - /my_volume:/app/boxfuse-sample-java-war-hello/target/hello-1.0.war
+      - /my_volume:/app/boxfuse-sample-java-war-hello/target
     networks:
       - webnet
 
