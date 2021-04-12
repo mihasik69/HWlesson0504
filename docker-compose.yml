@@ -4,7 +4,7 @@ services:
     build:
       context: ./buxfuse-custom
     volumes:
-      - /app:/my_volume
+      - /my_volume:/app
     networks:
       - webnet
 
