@@ -9,9 +9,3 @@ services:
       context: ./buxfuse-custom
     volumes:
       - my_volume:/app/boxfuse-sample-java-war-hello/target:rw
-    networks:
-      - webnet
-
-networks:
-  webnet:
-    driver: bridge
