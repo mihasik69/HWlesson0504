@@ -7,7 +7,7 @@ services:
         - type: volume
           source: my_volume
           target: /app/boxfuse-sample-java-war-hello/target
-  networks:networks:
+  networks:
       - webnet
 
   prod:
