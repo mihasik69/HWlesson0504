@@ -1,16 +1,17 @@
 version: '3'
+
+volumes:
+  my_volume:
+
 services:
   build_buxfuse:
     build:
       context: ./buxfuse-custom
     volumes:
-      - my_volume:/app/boxfuse-sample-java-war-hello/target
+      - my_volume:/app/boxfuse-sample-java-war-hello/target:rw
     networks:
       - webnet
 
 networks:
   webnet:
     driver: bridge
-
-volumes:
-  my_volume:
