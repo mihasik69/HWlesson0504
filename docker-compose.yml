@@ -1,14 +1,27 @@
-version: '3.8'
+version: '3'
 services:
   build_buxfuse:
     build:
       context: ./buxfuse-custom
+      volumes:
+        - type: volume
+          source: my_volume
+          target: /app/boxfuse-sample-java-war-hello/target
+  networks:networks:
+      - webnet
+
+  prod:
+    image: tomcat:9-jdk11-slim
+    ports:
+      - "8090:8080"
     volumes:
       - type: volume
         source: my_volume
-        target: /app/boxfuse-sample-java-war-hello/target
+        target: /usr/local/tomcat/webapps
     networks:
       - webnet
+    depends_on:
+      - build_buxfuse
 
 networks:
   webnet:
