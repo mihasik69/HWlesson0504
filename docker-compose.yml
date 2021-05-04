@@ -13,7 +13,7 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - /usr/local/tomcat/webapps:/my_volume
+      - /my_volume:/usr/local/tomcat/webapps
     networks:
       - webnet
 
