@@ -8,17 +8,6 @@ services:
     networks:
       - webnet
 
-  prod:
-    image: tomcat:9-jdk11-slim
-    ports:
-      - "8090:8080"
-    volumes:
-      - /usr/local/tomcat/webapps:/my_volume
-    networks:
-      - webnet
-    depends_on:
-      - build_buxfuse
-
 networks:
   webnet:
     driver: bridge
