@@ -1,4 +1,5 @@
 FROM openjdk:11-jdk
+VOLUME my_volume
 RUN apt-get update
 RUN apt-get install maven -y
 RUN apt-get install git -y
