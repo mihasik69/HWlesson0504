@@ -15,6 +15,6 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - /my_volume:/usr/local/tomcat/webapps
+      - /usr/local/tomcat/webapps:my_volume
     depends_on:
       - build_buxfuse
