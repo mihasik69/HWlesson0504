@@ -5,3 +5,4 @@ RUN apt-get install git -y
 WORKDIR /usr/src/app
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn package -f boxfuse-sample-java-war-hello/pom.xml
+VOLUME /usr/src/app:/usr/src/app
