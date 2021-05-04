@@ -18,10 +18,10 @@ services:
       - type: volume
         source: my_volume
         target: /usr/local/tomcat/webapps
-    networks:
-      - webnet
     depends_on:
       - build_buxfuse
+    networks:
+      - webnet
 
 networks:
   webnet:
