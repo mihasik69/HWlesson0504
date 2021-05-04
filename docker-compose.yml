@@ -4,18 +4,14 @@ services:
     build:
       context: ./buxfuse-custom
     volumes:
-      - type: volume
-        source: my_volume
-        target: /app/boxfuse-sample-java-war-hello/target
+      - my_volume:/app/boxfuse-sample-java-war-hello/target
 
   prod:
     image: tomcat:9-jdk11-slim
     ports:
       - "8090:8080"
     volumes:
-      - type: volume
-        source: my_volume
-        target: /usr/local/tomcat/webapps
+      - my_volume:/usr/local/tomcat/webapps
     depends_on:
       - build_buxfuse
 
