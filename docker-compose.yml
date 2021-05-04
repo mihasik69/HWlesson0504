@@ -8,19 +8,9 @@ services:
     networks:
       - webnet
 
-  prod:
-    image: tomcat:9-jdk11-slim
-    ports:
-      - "8090:8080"
-    volumes:
-      - /my_volume:/usr/local/tomcat/webapps
-    networks:
-      - webnet
-
 networks:
   webnet:
     driver: bridge
 
 volumes:
   my_volume:
-  app:
