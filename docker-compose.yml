@@ -1,11 +1,11 @@
-version: '3.9'
+version: '3.8'
 services:
   build_buxfuse:
     build:
       context: ./buxfuse-custom
     volumes:
       - type: volume
-        sourse: my_volume
+        source: my_volume
         target: /app/boxfuse-sample-java-war-hello/target
     networks:
       - webnet
